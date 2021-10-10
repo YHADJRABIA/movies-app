@@ -27,8 +27,13 @@ import {
   remove_movie,
 } from "../redux/moviesSlice";
 
-const Movie = ({ movie }) => {
+import { change_page } from "../redux/pagesSlice";
+
+const Movie = ({ movie, filteredMovies }) => {
   const dispatch = useDispatch();
+  const { indexOfFirstItem, indexOfLastItem, currentPage } = useSelector(
+    (state) => state.pages
+  );
   const { liked, disliked, movies, filter } = useSelector(
     (state) => state.movies
   );
@@ -60,9 +65,14 @@ const Movie = ({ movie }) => {
     dispatch(remove_movie(id));
     notify(`${title} has been removed.`);
 
-    // Reset filter to "all" if last movie of category removed.
-    if (movies.filter((movie) => movie.category === filter).length === 1)
-      dispatch(filter_movies(null));
+    // Reset filter to "all" if last movie of category removed or go to previous page if page has no more elements.
+    if (
+      filteredMovies.slice(indexOfFirstItem, indexOfLastItem).length === 1 &&
+      filteredMovies.length > 1
+    ) {
+      dispatch(change_page(currentPage - 1));
+    }
+    if (filteredMovies.length === 1) dispatch(filter_movies(null));
   };
 
   const convert = (value) => (value / 1000).toFixed(0) + "k";

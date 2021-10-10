@@ -33,10 +33,17 @@
   }
 }
 
+.items-limiter {
+  margin-top: 1.5rem;
+}
+
 /*------------ Reponsive -----------*/
 @include respond-to("medium") {
   .pagination {
     width: 40rem;
+  }
+  .items-limiter {
+    margin-top: 0;
   }
 }
 @include respond-to("large") {

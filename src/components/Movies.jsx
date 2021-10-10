@@ -38,7 +38,6 @@ const Movies = () => {
         <Loading />
       ) : (
         <ul className="movies-list">
-          {console.log()}
           {filteredMovies().length === 0 ? (
             <div className="not-found-container">
               <NotFoundImage />
@@ -49,7 +48,7 @@ const Movies = () => {
               .slice(indexOfFirstItem, indexOfLastItem)
               .map((movie) => (
                 <li key={movie.id}>
-                  <Movie movie={movie} />
+                  <Movie movie={movie} filteredMovies={filteredMovies()} />
                 </li>
               ))
           )}
