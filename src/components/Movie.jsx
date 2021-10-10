@@ -79,7 +79,7 @@ const Movie = ({ movie }) => {
         <img
           className="movie-cover"
           title={title}
-          src={`movies-app/images/${img}`}
+          src={`/images/${img}`}
           alt={title}
         />
         {/*    </LazyLoad> */}
