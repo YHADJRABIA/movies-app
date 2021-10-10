@@ -1,7 +1,6 @@
 {
   "name": "movies-app",
   "author": "Yacine Hadj Rabia",
-  "homepage": "https://YHADJRABIA.github.io/movies-app/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
