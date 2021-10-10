@@ -34,9 +34,7 @@ const Movie = ({ movie, filteredMovies }) => {
   const { indexOfFirstItem, indexOfLastItem, currentPage } = useSelector(
     (state) => state.pages
   );
-  const { liked, disliked, movies, filter } = useSelector(
-    (state) => state.movies
-  );
+  const { liked, disliked } = useSelector((state) => state.movies);
   const { id, title, img, category, likes, dislikes } = movie;
 
   // Undislikes already-disliked movie otherwise likes it.
