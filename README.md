@@ -2,6 +2,8 @@
 
 Movies app developed with ReactJS using Redux Toolkit showing a list of movies, the user may filter them by type, like/dislike movies, and decide how many movies can be showed per page.
 
+**⚠️ A strong emphasis had been on producing a clean, well-structured code with isolated components and state management.**
+
 Viewable here: **https://YHADJRABIA.github.io/movies-app/**
 
 ## Setup:
