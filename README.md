@@ -31,7 +31,7 @@ npm start
 - Pagination feature.
 - Choosing how much movies to display per page.
 - Loading animation to handle asynchronous actions when the promise is being resolved.
-- Lazy-loading images for better performance (commented out, but can be enabled by removing the comments).
+- Lazy-loading images for better performance (commented out, but can be enabled by removing the comments on Movie.jsx).
 
 ## Technologies:
 
